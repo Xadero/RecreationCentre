@@ -1,0 +1,55 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Kontakt";
+}
+<h2>@ViewData["Title"]</h2>
+<style type="text/css">
+    body {
+        background: #ccebff !important;
+    }
+</style>
+<address>
+    Ośrodek wypoczynkowy<br />
+    ul. Wypoczynkowa 9<br />
+    99-000 Miasto <br />
+</address>
+
+<address>
+    <strong>Telefon:</strong> +48 123 456 789<br />
+    <strong>E-Mail:</strong> <a href="mailto:OsrodekWypoczynkowy@gmail.com">OsrodekWypoczynkowy@gmail.com</a>
+</address>
+
+<body>
+    <form>
+        Forma kontaktu:<br>
+        <input type="radio" id="contactMail" name="contactform" value="E-Mail" checked onchange="getMail()"> E-Mail
+        <input type="radio" id="contactPhone" name="contactform" value="Telefon" onchange="getPhone()"> Telefon <br />
+
+        <input type="text" id="contact" name="phone" value=""><br>
+
+        Treść wiadomości: <br>
+        <input type="text" name="message" value="" width="200"><br>
+        <button type="button" onclick="sendMessage()">Wyślij</button>
+
+    </form>
+</body>
+
+<script type="text/javascript">
+    function getMail() {
+        document.getElementById("contact").setAttribute("type", "text");
+        document.getElementById("contact").value = '';
+    };
+
+    function getPhone() {
+        document.getElementById("contact").setAttribute("type", "number");
+        document.getElementById("contact").value = '';
+    };
+
+    function sendMessage() {
+        alert("Wiadomość została wysłana do obsługi klienta");
+        location.reload();
+    }
+
+</script>
+

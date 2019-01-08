@@ -1,0 +1,93 @@
+﻿@page
+@model WebApplication3.Pages.GalleryModel
+@{
+    ViewData["Title"] = "Galeria";
+}
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Galeria</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-grid.css">
+
+    <style type="text/css">
+        body {
+            background: #ccebff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container gallery-container">
+
+        <h1>Galeria</h1>
+        <div class="tz-gallery">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/lakehouse2.jpg">
+                        <img src="~/images/lakehouse2.jpg" alt="Lakehouse1" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/lakehouse3.jpg">
+                        <img src="~/images/lakehouse3.jpg" alt="lakehouse2" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="~/images/lawka.jpg">
+                        <img src="~/images/lawka.jpg" alt="Tunnel" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/summer-night-1711648_1920.jpg">
+                        <img src="~/images/summer-night-1711648_1920.jpg" alt="Coast" height="400" width="400">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/lakehouse2.jpg">
+                        <img src="~/images/lakehouse2.jpg" alt="Lakehouse1" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/lakehouse3.jpg">
+                        <img src="~/images/lakehouse3.jpg" alt="lakehouse2" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="~/images/lawka.jpg">
+                        <img src="~/images/lawka.jpg" alt="Tunnel" height="400" width="400">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="~/images/summer-night-1711648_1920.jpg">
+                        <img src="~/images/summer-night-1711648_1920.jpg" alt="Coast" height="400" width="400">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+</body>
+</html>
+
+
+
+
+
+
