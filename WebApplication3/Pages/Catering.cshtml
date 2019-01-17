@@ -1,0 +1,160 @@
+﻿@page
+@model WebApplication3.Pages.CateringModel
+@{
+    ViewData["Title"] = "Wyżywienie";
+}
+
+<h2>Wyżywienie</h2>
+
+<!Doctype html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <p align="justify">
+        <img src="~/images/strawberries-2144001_640.jpg" width="300" height="300" align="right" hspace="20" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus scelerisque ultrices aliquet. Curabitur molestie massa leo, a pretium magna sodales ac.
+        Curabitur elit eros, dapibus a tempor quis, porta non sapien. In hac habitasse platea dictumst.
+        Phasellus ac interdum lacus.
+        In suscipit congue ipsum at vestibulum. Duis tincidunt rutrum risus.
+        Duis id consequat neque.
+        Phasellus rhoncus feugiat eros eget pulvinar. Donec gravida ultrices dui luctus tempor.
+        Phasellus condimentum suscipit suscipit. Nam rhoncus tortor massa, id luctus metus vehicula non.
+        Fusce eget ante quis nisl aliquam vehicula eu eget sem. Integer a luctus lacus, vel vulputate orci.
+        Suspendisse vulputate ex in tristique maximus.
+    </p>
+    <p align="justify">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce ac erat nunc.
+        Nulla posuere, erat vel ultrices laoreet, elit ligula luctus felis, sit amet vehicula lorem mi efficitur quam.
+        Maecenas vel iaculis nisi, eget ullamcorper turpis. Cras tempus eleifend euismod. Cras hendrerit vulputate pulvinar.
+        Pellentesque ac erat rhoncus, dapibus nulla eu, tincidunt justo. Vivamus placerat dolor urna, consectetur porttitor tellus lobortis nec.
+        Quisque consectetur pulvinar eros vitae blandit. Donec id posuere turpis, vitae lobortis tellus.
+    </p>
+    <p align="justify">
+        <img src="~/images/breakfast-2359617_640.jpg" width="300" height="300" align="left" hspace="20" />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus scelerisque ultrices aliquet. Curabitur molestie massa leo, a pretium magna sodales ac.
+        Curabitur elit eros, dapibus a tempor quis, porta non sapien. In hac habitasse platea dictumst.
+        Phasellus ac interdum lacus.
+        In suscipit congue ipsum at vestibulum. Duis tincidunt rutrum risus.
+        Duis id consequat neque.
+        Phasellus rhoncus feugiat eros eget pulvinar. Donec gravida ultrices dui luctus tempor.
+        Phasellus condimentum suscipit suscipit. Nam rhoncus tortor massa, id luctus metus vehicula non.
+        Fusce eget ante quis nisl aliquam vehicula eu eget sem. Integer a luctus lacus, vel vulputate orci.
+        Suspendisse vulputate ex in tristique maximus.
+    </p>
+    <p align="justify">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce ac erat nunc.
+        Nulla posuere, erat vel ultrices laoreet, elit ligula luctus felis, sit amet vehicula lorem mi efficitur quam.
+        Maecenas vel iaculis nisi, eget ullamcorper turpis. Cras tempus eleifend euismod. Cras hendrerit vulputate pulvinar.
+        Pellentesque ac erat rhoncus, dapibus nulla eu, tincidunt justo. Vivamus placerat dolor urna, consectetur porttitor tellus lobortis nec.
+        Quisque consectetur pulvinar eros vitae blandit. Donec id posuere turpis, vitae lobortis tellus.
+    </p>
+    <br /><br /><br />
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr class="success">
+                    <th>Rodzaj wyżywienia</th>
+                    <th>Cena za dobę</th>
+                    <th>Cena za 2 doby</th>
+                    <th>Cena za tydzień</th>
+                    <th>Cena za 2 tygodnie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>Codzienne</td>
+                    <td>65</td>
+                    <td>120</td>
+                    <td>385</td>
+                    <td>700</td>
+                </tr>
+                <tr class="active">
+                    <td>Śniadanie</td>
+                    <td>22</td>
+                    <td>40</td>
+                    <td>126</td>
+                    <td>224</td>
+                </tr>
+                <tr class="active">
+                    <td>Obiad</td>
+                    <td>30</td>
+                    <td>56</td>
+                    <td>175</td>
+                    <td>308</td>
+                </tr>
+                <tr class="active">
+                    <td>Kolacja</td>
+                    <td>20</td>
+                    <td>36</td>
+                    <td>119</td>
+                    <td>210</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="button" class="btn btn-default" style="width: 150px;" data-toggle="modal" data-target="#cateringModal">Zamów wyżywienie</button>
+
+    <div class="modal fade" id="cateringModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Zamów wyżywienie</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Numer zamowienia</p>
+                    <input type="text" id="reservationNumber" /> <br /><br />
+                    <p>Rodzaj wyżywienia</p>
+
+                    <select id="kindOfCatering" required>
+                        <option value="everyday">Codzienne</option>
+                        <option value="breakfast">Śniadanie</option>
+                        <option value="dinner">Obiad</option>
+                        <option value="suppper">Kolacja</option>
+                    </select>
+                    
+                    <p>Okres wyżywienia</p>
+                    <select id="timeOfCatering" required>
+                        <option value="1phouse">Doba</option>
+                        <option value="1phouse">2 doby</option>
+                        <option value="3phouse">Tydzień</option>
+                        <option value="4phouse">Dwa tygodnie</option>
+                    </select><br /><br />
+                    <span class="firstLabel"><b>Forma płatności</b></span><br />
+                    <input type="radio" id="offline" name="contactform" checked> Płatność przy kwaterowaniu <br />
+                    <input type="radio" id="online" name="contactform"> Płatność kartą <br /><br />
+                    <br /> <br />
+                    <span class="custonlabel danger" id="wrongNumber" style="display:none">Nieprawidłowy numer zamówienia</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="accomodation" class="btn btn-default" onclick="checkCatering()">Zamów</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zakmnij</button>
+                    <p id="status"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkCatering() {
+            var number = document.getElementById("reservationNumber");
+            if (number.value == "2019/01/16/2137") {
+                alert("Wyżywienie zostało zamówione!");
+                number.value = "";
+                document.getElementById("wrongNumber").style.display = "none";
+                document.getElementById("cateringModal").style.display = "none";
+                location.reload();
+            } else {
+                document.getElementById("wrongNumber").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

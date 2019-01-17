@@ -1,13 +1,9 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Ośrodek wypoczynkowy";
 }
-<style type="text/css">
-    body {
-        background: #ccebff !important;
-    }
-</style>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -21,7 +17,7 @@
             <div class="carousel-caption" role="option">
                 <p>
                     Wysoki standard, idealne miejsce do wypoczynku dla dzieci, młodzieży i dorosłych w niskich cenach.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                    <a class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
                         Dowiedz się więcej
                     </a>
                 </p>
@@ -32,7 +28,7 @@
             <div class="carousel-caption" role="option">
                 <p>
                     Wiele form ciekawego oraz aktywnego spędzenia wolnego czasu
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                    <a class="btn btn-default" href="/Attractions">
                         Dowiedz się więcej
                     </a>
                 </p>
@@ -43,7 +39,7 @@
             <div class="carousel-caption" role="option">
                 <p>
                     Najsmaczniejsze i najtańsze jedzenie świeżo przygotowane przez naszego szefa kuchni 
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                    <a class="btn btn-default" href="/Catering">
                         Dowiedz się więcej
                     </a>
                 </p>

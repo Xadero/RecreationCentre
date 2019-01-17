@@ -1,14 +1,10 @@
 ﻿@page
 @model ContactModel
+<img src="~/images/call-center-1015274_640.jpg" width="600" height="400" align="right" />
 @{
     ViewData["Title"] = "Kontakt";
 }
 <h2>@ViewData["Title"]</h2>
-<style type="text/css">
-    body {
-        background: #ccebff !important;
-    }
-</style>
 <address>
     Ośrodek wypoczynkowy<br />
     ul. Wypoczynkowa 9<br />
@@ -26,11 +22,11 @@
         <input type="radio" id="contactMail" name="contactform" value="E-Mail" checked onchange="getMail()"> E-Mail
         <input type="radio" id="contactPhone" name="contactform" value="Telefon" onchange="getPhone()"> Telefon <br />
 
-        <input type="text" id="contact" name="phone" value=""><br>
+        <input type="text" id="contact" name="phone" value=""><br><br />
 
         Treść wiadomości: <br>
-        <input type="text" name="message" value="" width="200"><br>
-        <button type="button" onclick="sendMessage()">Wyślij</button>
+        <input type="text" id="message" name="message" value="" width="200"><br><br />
+        <button type="button" class ="btn btn-default" style="width: 150px;" onclick="sendMessage()">Wyślij</button>
 
     </form>
 </body>
@@ -47,8 +43,12 @@
     };
 
     function sendMessage() {
-        alert("Wiadomość została wysłana do obsługi klienta");
-        location.reload();
+        if (document.getElementById("contact").innerHTML != "" && document.getElementById("message").innerHTML != "") {
+            alert("Wiadomość została wysłana do obsługi klienta");
+            location.reload();
+        } else {
+            alert("Proszę uzupełnić wartości w polach: E-mail/Telefon oraz Treść wiadomości!");
+        }
     }
 
 </script>

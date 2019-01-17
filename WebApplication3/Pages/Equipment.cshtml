@@ -1,0 +1,91 @@
+﻿@page
+@model WebApplication3.Pages.EquipmentModel
+@{
+    ViewData["Title"] = "Wypożyczalnia sprzętu";
+}
+<h2>Wypożyczalnia sprzętu</h2>
+<!Doctype html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <img src="~/images/the-ball-283238_640.jpg" align="right"/>
+    <p>Numer zamowienia</p>
+    <input type="text" id="reservationNumber" /> <br /><br />
+    <span class="firstLabel"><b>Forma płatności</b></span><br />
+    <input type="radio" id="offline" name="contactform" checked> Płatność przy recepcji <br />
+    <input type="radio" id="online" name="contactform"> Płatność kartą <br /><br />
+
+    <p>Rodzaj sprzętu</p>
+    <select id="equipmentKind">
+        <option value="fishingrod">Wędka</option>
+        <option value="waterbike">Rowerek wodny</option>
+        <option value="badminton">Badminton</option>
+        <option value="balls">Piłki</option>
+        <option value="boat">Łódka</option>
+        <option value="fins">Płetwy do pływania</option>
+    </select>
+
+    <p>Liczba godzin</p>
+    <select id="hours">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">6</option>
+        <option value="seven">7</option>
+        <option value="eight">8</option>
+    </select>
+    <br /><br />
+    <button type="button" class="btn btn-default" style="width: 150px;" onclick="checkEquipment()">Wyślij</button>
+    
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr class="success">
+                    <th>Rodzaj sprzętu</th>
+                    <td>Wędka</td>
+                    <td>Rowerek wodny</td>
+                    <td>Badminton</td>
+                    <td>Piłki</td>
+                    <td>Łódka</td>
+                    <td>Płetwy do pływania</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <th>Cena za godzinę (zł)</th>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>7</td>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        function checkEquipment() {
+            var number = document.getElementById("reservationNumber");
+            var kind = document.getElementById("equipmentKind");
+            var hours = document.getElementById("hours");
+            if (number.value == "2019/01/16/2137") {
+                alert("Wyżywienie zostało zamówione!");
+                number.value = "";
+                kind.value = "1";
+                hours.value = "Wędka";
+                location.reload();
+            } else {
+                alert("Niepoprawny numer zamówienia!")
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+

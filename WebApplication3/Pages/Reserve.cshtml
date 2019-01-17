@@ -6,12 +6,57 @@
 
 <html lang="en">
 <head>
-
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+    <form>
+        <h2>REZERWACJA</h2>
 
-    <h2>ELO</h2>
+        <img src="~/images/lake-3552243_640.jpg" align="right" />
+        <input type="radio" id="mr" name="mrReserve" value="Pan" required> Pan
+        <input type="radio" id="mrs" name="mrReserve" value="Pani" required> Pani <br /><br />
 
+        <div>
+            <span class="firstLabel"><b>Imię</b></span>
+            <span class="secondLabel"><b>Nazwisko</b></span>
+        </div>
+
+        <input type="text" required>
+        <input type="text" required> <br /><br />
+
+        <div>
+            <span class="secondLabel"><b>Ulica</b></span>
+            <span class="firstLabel"><b>Nr domu</b></span>
+        </div>
+        <input type="text" style="width: 280px;" required>
+        <input type="text" width="50" style="width: 70px;" required> <br /><br />
+
+        <span class="firstLabel"><b>Kod pocztowy</b></span><br />
+        <input id="zipcode" type="text" data-inputmask="'mask': '99-999'" /><br /><br />
+
+        <span class="firstLabel"><b>E-Mail</b></span><br />
+        <input type="text" required> <br /><br />
+
+        <span class="firstLabel"><b>nr telefonu</b></span><br />
+        <input type="number" required> <br /><br />
+
+        <span class="firstLabel"><b>Forma płatności</b></span><br />
+        <input type="radio" id="offline" name="contactform" checked> Płatność przy kwaterowaniu <br />
+        <input type="radio" id="online" name="contactform"> Płatność kartą <br /><br />
+
+        <input type="checkbox" required> Tak, zapoznałem się i akceptuję regulamin ośrodka wypoczynkowego <br /><br />
+
+        <input type="submit" class="btn btn-default" id="reserveBtn" value="Zarezerwuj" />
+    </form>
+    <script type="text/javascript">
+        function validateFields() {
+            var elements = document.getElementsByTagName("input");
+
+            for (var i = 0; i < elements.length; i++) {
+
+            }
+        }
+    </script>
 </body>
 </html>
 

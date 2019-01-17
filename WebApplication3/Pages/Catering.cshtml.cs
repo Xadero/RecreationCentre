@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApplication3.Pages
 {
-    public class PrivacyModel : PageModel
+    public class CateringModel : PageModel
     {
         public void OnGet()
         {
+
         }
     }
 }

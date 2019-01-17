@@ -44,3 +44,26 @@ body {
      }
 }
 
+.firstLabel {
+    margin-right: 150px;
+}
+
+.secondLabel {
+    margin-right: 250px;
+}
+
+.custonlabel {
+    color: white;
+    padding: 8px;
+    font-family: Arial;
+}
+
+.success {
+    background-color: #4CAF50;
+}
+/* Green */
+.danger {
+    background-color: #f44336;
+}
+/* Red */
+
